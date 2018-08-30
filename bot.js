@@ -287,4 +287,12 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
     
    }
    });
+
+  const Discord = require('discord.js');
+const epic = new Discord.Client();
+
+epic.on('ready',async () => {
+  epic.channels.find(ch => ch.id === "482060069073190912" && ch.type === 'voice').join();
+});
+
 client.login(process.env.BOT_TOKEN)
