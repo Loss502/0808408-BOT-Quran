@@ -288,11 +288,19 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }
    });
 
-  const Discord = require('discord.js');
-const epic = new Discord.Client();
+client.on("message", async message => {
+    if (message.author.bot) return;
+    if (message.channel.type === "dm") return;
+    if (!message.member.voiceChannel) return;
+    let messageArray = message.content.split(" ");
+    let command = messageArray[0];
 
-epic.on('ready',async () => {
-  epic.channels.find(ch => ch.id === "482060069073190912" && ch.type === 'voice').join();
+if (command === prefix+ `join`) {
+
+        message.member.voiceChannel.join()
+    message.channel.send('**Joined**')
+};
+
 });
 
 client.login(process.env.BOT_TOKEN)
