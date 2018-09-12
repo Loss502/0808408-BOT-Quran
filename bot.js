@@ -266,27 +266,27 @@ client.on("message", message => {
  if (message.content === "@help") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
-      .setDescription(`
-${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
+      .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
+${prefix}play  ۩  لتشغيل القرآن برآبط أو بأسم
 
-${prefix}skip ۩ لتجآوز المقطع الحآلي
+${prefix}skip  ۩  لتجآوز المقطع الحآلي
 
-${prefix}pause ۩ إيقآف المقطع مؤقتا
+${prefix}pause  ۩  إيقآف المقطع مؤقتا
 
-${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
+${prefix}resume  ۩  لموآصلة المقطع بعد إيقآفه مؤقتا
 
-${prefix}vol ۩ لتغيير درجة الصوت 100 - 0
+${prefix}vol  ۩  لتغيير درجة الصوت 100 - 0
 
-${prefix}stop ۩ لإخرآج البوت من الروم
+${prefix}stop  ۩  لإخرآج البوت من الروم
 
-${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
+${prefix}np  ۩  لمعرفة المقاطع المشغلة حآليا
 
-${prefix}queue ۩ لمعرفة قآئمة التشغيل
+${prefix}queue  ۩  لمعرفة قآئمة التشغيل
 
-${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
+${prefix}لمعرفة اذكار   الصباح  ۩ اذكار الصباح 
 
-${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
- `)
+${prefix}Mes  ۩  ارسال اقتراح او لمراسلة صاحب البوت
+ ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
    message.channel.sendEmbed(embed)
     
    }
@@ -363,11 +363,12 @@ client.on('message', message => {
       if(!message.channel.guild) return message.reply('Sorry, i Can Not Inv My Link In Your DM ;(')
         if(!message.channel.guild) return;
     let embed = new Discord.RichEmbed()
+	.setColor("RANDOM")
     .setAuthor(` ${message.author.username} `, message.author.avatarURL)
-    .setTitle(`:small_orange_diamond:اضغط هنا :blush: `)
+    .setTitle(` ⚙ Click Here ⚙ `)
     .setURL(`https://discordapp.com/oauth2/authorize?client_id=489287539015024660&permissions=8&scope=bot`)
     .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")
-    .addField('🔹By', "<@" + message.author.id + ">")
+    setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
  message.channel.sendEmbed(embed);
    }
 });
