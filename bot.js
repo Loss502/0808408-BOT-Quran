@@ -268,14 +268,23 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setDescription(`
 ${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
+
 ${prefix}skip ۩ لتجآوز المقطع الحآلي
+
 ${prefix}pause ۩ إيقآف المقطع مؤقتا
+
 ${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
+
 ${prefix}vol ۩ لتغيير درجة الصوت 100 - 0
+
 ${prefix}stop ۩ لإخرآج البوت من الروم
+
 ${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
+
 ${prefix}queue ۩ لمعرفة قآئمة التشغيل
+
 ${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
+
 ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
  `)
    message.channel.sendEmbed(embed)
@@ -336,21 +345,18 @@ client.on('message', message => {
       "\n" + "" + "» " + message.author.tag + "" +
       "\n" + "" + " ● الرسالة : " + "" +
       "\n" + "" + args + "")
-  }
-  });
 
-   client.on('message', message => {
-if (message.content.startsWith('rsug')){
-     let embed = new Discord.RichEmbed()
+	       let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setColor("random")
-  .addField(" Done | تــــم :white_check_mark:" , "  تم إرسال الرسالة لصاحب البوت سنتطلع عليها قريبا  ")
+  .setColor("RANDOM")
+  .addField(" Done | تــــم " , "  تم ارسال الرسالة الى صاحب البوت بنجاح  ")
 
 
   message.channel.sendEmbed(embed);
     }
 });
- 
+
+
  
 client.on('message', message => {
     if (message.content === "@inv") {
