@@ -264,25 +264,44 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 client.on("message", message => {
  if (message.content === "@help") {
-  const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-      .setColor("#000000")//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
       .setDescription(`
-${prefix}play ۩ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ۩ لتجآوز الأغنية الحآلية
-${prefix}pause ۩ إيقآف الأغنية مؤقتا
-${prefix}resume ۩ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
+${prefix}skip ۩ لتجآوز المقطع الحآلي
+${prefix}pause ۩ إيقآف المقطع مؤقتا
+${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
 ${prefix}vol ۩ لتغيير درجة الصوت 100 - 0
 ${prefix}stop ۩ لإخرآج البوت من الروم
-${prefix}np ۩ لمعرفة الأغنية المشغلة حآليا
+${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
 ${prefix}queue ۩ لمعرفة قآئمة التشغيل
 ${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
 ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
- `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-   message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+ `)
+   message.channel.sendEmbed(embed)
     
    }
    });
    
+   
+   
+   client.on('message', message => {
+       if (message.content === prefix + "@help") {
+       let embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .addField("${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
+${prefix}skip ۩ لتجآوز المقطع الحآلي
+${prefix}pause ۩ إيقآف المقطع مؤقتا
+${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
+${prefix}vol ۩ لتغيير درجة الصوت 100 - 0
+${prefix}stop ۩ لإخرآج البوت من الروم
+${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
+${prefix}queue ۩ لمعرفة قآئمة التشغيل
+${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
+${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت" , client.guilds.size)
+    message.channel.sendEmbed(embed);
+      }
+  });
 
 
  client.on('message', msg => {
@@ -321,7 +340,47 @@ client.on('message', message => {
   });
  
 
+client.on('message', message => {
 
+  if (message.content.startsWith( prefix + "mes")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.users.get("336773905043685390").send(
+      "\n" + "" + "● السيرفر :" + "" +
+      "\n" + "" + "» " + message.guild.name + "" +
+      "\n" + "" + " ● المرسل : " + "" +
+      "\n" + "" + "» " + message.author.tag + "" +
+      "\n" + "" + " ● الرسالة : " + "" +
+      "\n" + "" + args + "")
+  }
+  });
+
+   client.on('message', message => {
+if (message.content.startsWith('rsug')){
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("random")
+  .addField(" Done | تــــم :white_check_mark:" , "  تم إرسال الرسالة لصاحب البوت سنتطلع عليها قريبا  ")
+
+
+  message.channel.sendEmbed(embed);
+    }
+});
+ 
+ 
+client.on('message', message => {
+    if (message.content === "@inv") {
+      if(!message.channel.guild) return message.reply('Sorry, i Can Not Inv My Link In Your DM ;(')
+        if(!message.channel.guild) return;
+    let embed = new Discord.RichEmbed()
+    .setAuthor(` ${message.author.username} `, message.author.avatarURL)
+    .setTitle(`:small_orange_diamond:اضغط هنا :blush: `)
+    .setURL(`https://discordapp.com/oauth2/authorize?client_id=489287539015024660&permissions=8&scope=bot`)
+    .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")
+    .addField('🔹By', "<@" + message.author.id + ">")
+ message.channel.sendEmbed(embed);
+   }
+});
  
 
 
@@ -366,7 +425,7 @@ if  (msg.content === 'اذكار الصباح') {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [` @help `,`By : FiKO || ໑ڪــɹ̤ᓅ`,`@inv`,`@suppport`];
+    var setGame = [`@help | @inv |  @suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
     var i = -1;
     var j = 0;
     setInterval(function (){
