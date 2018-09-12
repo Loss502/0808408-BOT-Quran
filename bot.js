@@ -267,6 +267,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
+	  
 ${prefix}play  ۩  لتشغيل القرآن برآبط أو بأسم
 
 ${prefix}skip  ۩  لتجآوز المقطع الحآلي
@@ -286,6 +287,7 @@ ${prefix}queue  ۩  لمعرفة قآئمة التشغيل
 ${prefix}لمعرفة اذكار   الصباح  ۩ اذكار الصباح 
 
 ${prefix}Mes  ۩  ارسال اقتراح او لمراسلة صاحب البوت
+
  ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
    message.channel.sendEmbed(embed)
     
@@ -299,7 +301,7 @@ ${prefix}Mes  ۩  ارسال اقتراح او لمراسلة صاحب البو�
 
  client.on('message', msg => {
   if (msg.content === '@suppport') {
-    msg.reply('السيرفر للمساعده,');
+    msg.reply('https://discord.gg/ZfeTqSP');
   }
 });
    
@@ -307,7 +309,7 @@ ${prefix}Mes  ۩  ارسال اقتراح او لمراسلة صاحب البو�
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('bcs')){
+if (message.content.startsWith('@bcs')){
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
     var bc = new
@@ -368,7 +370,7 @@ client.on('message', message => {
     .setTitle(` ⚙ Click Here ⚙ `)
     .setURL(`https://discordapp.com/oauth2/authorize?client_id=489287539015024660&permissions=8&scope=bot`)
     .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")
-    setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+    .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
  message.channel.sendEmbed(embed);
    }
 });
