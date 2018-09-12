@@ -323,21 +323,7 @@ client.on('message', message => {
 
 
  
-client.on('message', message => {
-                                if(!message.channel.guild) return;
-                        if (message.content.startsWith('@ping')) {
-                            if(!message.channel.guild) return;
-                            var msg = ${Date.now() - message.createdTimestamp}
-                            var api = ${Math.round(client.ping)}
-                            if (message.author.bot) return;
-                        let embed = new Discord.RichEmbed()
-                        .setAuthor(message.author.username,message.author.avatarURL)
-                        .setColor('RANDOM')
-                        .addField('Time Taken:',msg + " ms :signal_strength: ")
-                        .addField('WebSocket:',api + " ms :signal_strength: ")
-         message.channel.send({embed:embed});
-                        }
-                    });
+
 
   const Slam = [
   'اذكار الصباح | أَصْـبَحْنا وَأَصْـبَحَ المُـلْكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذا اليوم وَخَـيرَ ما بَعْـدَه ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذا اليوم وَشَرِّ ما بَعْـدَه، رَبِّ أَعـوذُبِكَ مِنَ الْكَسَـلِ وَسـوءِ الْكِـبَر ، رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْر.',
