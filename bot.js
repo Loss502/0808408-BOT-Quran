@@ -268,13 +268,15 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
 	  
-${prefix}play  ➼  لتشغيل القرآن برآبط أو بأسم
+⦃ عند وجود اي مشكله توجه  لسيفر السبورت ⦄
+⚙ https://discord.gg/ZfeTqSP ⚙
+${prefix}play  ➼  لتشغيل القرآن الكريم برآبط أو بأسم
 
-${prefix}skip  ➼  لتجآوز المقطع الحآلي
+${prefix}skip  ➼  لتجآوز القرآن الكريم الحآلي
 
-${prefix}pause  ➼  إيقآف المقطع مؤقتا
+${prefix}pause  ➼  لإيقآف القرآن الكريم مؤقتا
 
-${prefix}resume  ➼  لموآصلة المقطع بعد إيقآفه مؤقتا
+${prefix}resume  ➼  لموآصلة القرآن الكريم بعد إيقآفه مؤقتا
 
 ${prefix}vol  ➼  لتغيير درجة الصوت 100 - 0
 
@@ -286,7 +288,7 @@ ${prefix}queue  ➼  لمعرفة قآئمة التشغيل
 
 ${prefix}لمعرفة جميع الأذكار ➼ الاذكار
 
-${prefix}Mes  ➼  ارسال اقتراح او لمراسلة صاحب البوت
+${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البوت
 
 【 سنقوم بإضافة العديد من المميزات بدعمكم نستمر وشكرا 】 
 
@@ -304,6 +306,7 @@ client.on("message", message => {
       .setDescription(` ✧▬▬▬▬▬▬ جميع الاذكار  ▬▬▬▬▬▬✧
 	  
 لمعرفة اذكار الصباح قم بكتابة ➼ اذكار الصباح 
+
 【 سنقوم بإضافة العديد من الأذكار و المميزات بدعمكم نستمر وشكرا 】 
 
  ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
@@ -315,9 +318,9 @@ client.on("message", message => {
 
 
  client.on('message', msg => {
-  if (msg.content === '@suppport') {
-    msg.reply('https://discord.gg/ZfeTqSP');
-  }
+if(msg.content === "@suppport"){
+msg.channel.send("⚙ https://discord.gg/ZfeTqSP ⚙");
+}
 });
    
    
