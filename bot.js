@@ -289,7 +289,7 @@ ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
        if (message.content === prefix + "help") {
        let embed = new Discord.RichEmbed()
     .setColor("RANDOM")
-    .addField(.setDescription(`
+    .addField( setDescription(`
 ${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
 ${prefix}skip ۩ لتجآوز المقطع الحآلي
 ${prefix}pause ۩ إيقآف المقطع مؤقتا
