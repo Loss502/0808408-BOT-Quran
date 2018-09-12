@@ -286,10 +286,11 @@ ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
    
    
    client.on('message', message => {
-       if (message.content === prefix + "@help") {
+       if (message.content === prefix + "help") {
        let embed = new Discord.RichEmbed()
     .setColor("RANDOM")
-    .addField("${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
+    .addField(.setDescription(`
+${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
 ${prefix}skip ۩ لتجآوز المقطع الحآلي
 ${prefix}pause ۩ إيقآف المقطع مؤقتا
 ${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
@@ -298,7 +299,8 @@ ${prefix}stop ۩ لإخرآج البوت من الروم
 ${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
 ${prefix}queue ۩ لمعرفة قآئمة التشغيل
 ${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
-${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت" , client.guilds.size)
+${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
+ `)
     message.channel.sendEmbed(embed);
       }
   });
