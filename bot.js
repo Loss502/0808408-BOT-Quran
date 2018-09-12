@@ -311,22 +311,15 @@ Discord.RichEmbed()
 }
 });
 
-client.on('message' , message => { 
-    var prefix = '@';
-    if (message.author.bot) return;
-     if (message.content === prefix + "sr") {
-       if (message.author.id !== '336773905043685390') return message.reply(' هذا الأمر فقط لصاحب البوت و شكراًً ')
-
-if(!message.channel.guild) return;
-  if(message.content < 1023) return
-  const Embed11 = new Discord.RichEmbed()
-.setAuthor(client.user.username,client.user.avatarURL)
-.setThumbnail(client.user.avatarURL)
-.setDescription(***مجموع السيرفرات ${client.guilds.size} \n \n${client.guilds.map(guilds =>- ${guilds.name}).join('\n')}***)
-         message.channel.sendEmbed(Embed11)
-    }
-});
-
+client.on('message', message => {
+       if (message.content === prefix + "sr") {
+       let embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .addField("✩ السيرفرات ✩" , client.guilds.size)
+    message.channel.sendEmbed(embed);
+      }
+  });
+ 
 
 client.on('guildCreate', guild => {
   client.channels.get("ايدي روم").send(**Woops new server ✅
