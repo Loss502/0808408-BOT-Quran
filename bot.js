@@ -265,7 +265,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 client.on("message", message => {
  if (message.content === "@help") {
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
       .setDescription(`
 ${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
 ${prefix}skip ۩ لتجآوز المقطع الحآلي
@@ -285,25 +285,7 @@ ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
    
    
    
-   client.on('message', message => {
-       if (message.content === prefix + "help") {
-       let embed = new Discord.RichEmbed()
-    .setColor("RANDOM")
-    .addField( setDescription(`
-${prefix}play ۩ لتشغيل القرآن برآبط أو بأسم
-${prefix}skip ۩ لتجآوز المقطع الحآلي
-${prefix}pause ۩ إيقآف المقطع مؤقتا
-${prefix}resume ۩ لموآصلة المقطع بعد إيقآفه مؤقتا
-${prefix}vol ۩ لتغيير درجة الصوت 100 - 0
-${prefix}stop ۩ لإخرآج البوت من الروم
-${prefix}np ۩ لمعرفة المقاطع المشغلة حآليا
-${prefix}queue ۩ لمعرفة قآئمة التشغيل
-${prefix}لمعرفة اذكار الصباح  ۩ اذكار الصباح 
-${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
- `)
-    message.channel.sendEmbed(embed);
-      }
-  });
+
 
 
  client.on('message', msg => {
