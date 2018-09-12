@@ -268,8 +268,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
 	  
-⦃ عند وجود اي مشكله توجه  لسيفر السبورت ⦄
+【 عند وجود اي مشكله توجه  لسيفر السبورت 】
 ⚙ https://discord.gg/ZfeTqSP ⚙
+
 ${prefix}play  ➼  لتشغيل القرآن الكريم برآبط أو بأسم
 
 ${prefix}skip  ➼  لتجآوز القرآن الكريم الحآلي
@@ -318,11 +319,23 @@ client.on("message", message => {
 
 
  client.on('message', msg => {
-if(msg.content === "@suppport"){
+if(msg.content === "@support"){
 msg.channel.send("⚙ https://discord.gg/ZfeTqSP ⚙");
 }
 });
    
+client.on('message', message => {
+if (message.content.startsWith('@support')){
+     let ra3d = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANDOM")
+  .setDescription(" ⚙ https://discord.gg/ZfeTqSP ⚙")
+
+
+  message.channel.sendEmbed(ra3d);
+    }
+});
+ 
    
 client.on('message', message => {
             if(!message.channel.guild) return;
