@@ -321,12 +321,7 @@ client.on('message', message => {
   });
  
 
-client.on('guildCreate', guild => {
-  client.channels.get("ايدي روم").send(**Woops new server ✅
-Server name: __${guild.name}__
-Server owner: __${guild.owner}__**)
-});
- 
+
  
  client.on('message', message => {
 if(!message.channel.guild) return;
