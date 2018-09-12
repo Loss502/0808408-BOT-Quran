@@ -327,11 +327,11 @@ msg.channel.send("⚙ https://discord.gg/ZfeTqSP ⚙");
 client.on('message', message => {
 if (message.content.startsWith('@support')){
      let ra3d = new Discord.RichEmbed()
-  .addField(" Technical support ")
   .setAuthor(message.author.username)
   .setColor("RANDOM")
-  .setDescription(" ⚙ https://discord.gg/ZfeTqSP ⚙")
+  .addField("Technical Support")
   .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+  .setDescription(" ⚙ https://discord.gg/ZfeTqSP ⚙")
 
 
   message.channel.sendEmbed(ra3d);
