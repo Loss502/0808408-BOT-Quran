@@ -366,7 +366,7 @@ if  (msg.content === 'اذكار الصباح') {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`@help ON ${client.guilds.size} Servers`,`@help ${client.users.size} Users`];
+    var setGame = [` @help `,`By : FiKO || ໑ڪــɹ̤ᓅ`];
     var i = -1;
     var j = 0;
     setInterval(function (){
