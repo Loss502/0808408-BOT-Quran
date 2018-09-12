@@ -283,34 +283,7 @@ ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
    }
    });
    
-   client.on('message', msg => {
-    if(msg.content === '@@help') {
 
-        if(!msg.channel.guild) return msg.reply("هذا الأمر للسيرفرات فقط")
-        let staff = msg.guild.member(msg.author).roles.find('name', 'general');
-
-if(!staff) return msg.reply('انت لست من الأداره')
-if (msg.author.bot) return;
-  const embed = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setThumbnail(msg.author.avatarURL)
-                                .setTitle("أوامر الأداره")
-            .setDescription(اهلاً ايها الأداري ${msg.author.tag}
-            هذه اوامر الأداره للتذكير
-            @bcs || ارسال رساله لجميع سيفرات البوت
-            @sr || معرفه عدد السيفرات المتواجد بها البوت 
-            @ping || معرفه سرعه اتصال البوت 
-            
-			unmute
-			unmute
-			)
-
-
-        msg.author.sendEmbed(embed)
-
-    }
-
-});
 
  client.on('message', msg => {
   if (msg.content === '@suppport') {
