@@ -288,7 +288,6 @@ ${prefix}Mes ۩ ارسال اقتراح او لمراسلة صاحب البوت
  client.on('message', msg => {
   if (msg.content === '@suppport') {
     msg.reply('السيرفر للمساعده,');
-	.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
   }
 });
    
@@ -324,7 +323,6 @@ if(!message.channel.guild) return;
 .setAuthor(client.user.username,client.user.avatarURL)
 .setThumbnail(client.user.avatarURL)
 .setDescription(***مجموع السيرفرات ${client.guilds.size} \n \n${client.guilds.map(guilds =>- ${guilds.name}).join('\n')}***)
-.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
          message.channel.sendEmbed(Embed11)
     }
 });
@@ -389,7 +387,6 @@ if  (msg.content === 'اذكار الصباح') {
     .setDescription(`${Slam[Math.floor(Math.random() * Slam.length)]}`)
     .setThumbnail(msg.author.avatarURL)
     msg.channel.send(slamat);
-	.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
   }
 });
 
