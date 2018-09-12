@@ -327,8 +327,8 @@ msg.channel.send("⚙ https://discord.gg/ZfeTqSP ⚙");
 client.on('message', message => {
 if (message.content.startsWith('@support')){
      let ra3d = new Discord.RichEmbed()
+  .addField(" Technical support ")
   .setAuthor(message.author.username)
-  .addField("سيفر السبورت" , client.guilds.size)
   .setColor("RANDOM")
   .setDescription(" ⚙ https://discord.gg/ZfeTqSP ⚙")
   .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
