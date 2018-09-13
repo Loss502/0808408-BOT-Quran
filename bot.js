@@ -332,10 +332,19 @@ if (message.content.startsWith('@support')){
 });
    
    
-   client.on('guildCreate', guild => {
-  client.channels.get("489635595551899648").send(`**Woops new server ✅**
+client.on('guildCreate', guild => {
+  client.channels.get("489635595551899648").send(`✅ **فة البوت في سيرفر جديد مبروكك
 Server name: __${guild.name}__
-Server owner: __${guild.owner}__**`)
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});
+client.on('guildDelete', guild => {
+  client.channels.get("489635595551899648").send(`❎ **تم طرد البوت من السيفر
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
 });
    
 client.on('message', message => {
