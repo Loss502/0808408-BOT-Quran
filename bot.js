@@ -472,13 +472,6 @@ client.on('guildCreate', guild => {
 
 
 
- client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`💌 ولكم نورت السيرفر 💌 
-👤  【 ${member} 】  👤 
- أنت عضو رقم : ${member.guild.memberCount} `) 
-}).catch(console.error)
-}) ;
 
 client.on('ready', function(){
     var ms = 10000 ;
