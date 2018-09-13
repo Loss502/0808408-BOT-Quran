@@ -459,6 +459,26 @@ if  (msg.content === 'اذكار الصباح') {
   }
 });
 
+
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setFooter(`BOT Quran`)
+  .setDescription(`🕌 **شكراً لك لإضافه بوت القرآن الى سيرفرك** 🕌`)
+  .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+	  guild.owner.send(embed)
+});
+
+
+ Code Alphacopyright arrow_down            
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`💌 ولكم نورت السيرفر 💌 
+👤 【 ${member} 】 👤
+انت العضو رقم ${member.guild.memberCount} `) 
+}).catch(console.error)
+}) 
+
 client.on('ready', function(){
     var ms = 10000 ;
     var setGame = [`@help | @inv |  @suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
