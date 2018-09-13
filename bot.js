@@ -333,7 +333,7 @@ if (message.content.startsWith('@support')){
    
    
 client.on('guildCreate', guild => {
-  client.channels.get("489635595551899648").send(**Woops new server ✅
+  client.channels.get("489635595551899648").send("Woops new server ✅")
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__**)
 });
