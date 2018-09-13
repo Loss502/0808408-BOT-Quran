@@ -470,14 +470,15 @@ client.on('guildCreate', guild => {
 });
 
 
- Code Alphacopyright arrow_down            
-client.on("guildMemberAdd", member => {
+
+
+ client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`💌 ولكم نورت السيرفر 💌 
-👤 【 ${member} 】 👤
-انت العضو رقم ${member.guild.memberCount} `) 
+👤  【 ${member} 】  👤 
+ أنت عضو رقم : ${member.guild.memberCount} `) 
 }).catch(console.error)
-}) 
+}) ;
 
 client.on('ready', function(){
     var ms = 10000 ;
