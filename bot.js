@@ -316,26 +316,15 @@ client.on("message", message => {
    }
    });
 
-client.on('message', message=> {
+client.on('message' , message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("%help | %inv |  %suppport");
+    message.reply("%help | %inv |  %suppport || أوامر البوت");
     }
 });
 
 
-client.on('message', message => {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-  .setColor("RANDOM")
-  .setDescription("%help | %inv |  %suppport || أوامر البوت")
-
-
-  message.channel.sendEmbed(ra3d);
-    }
-});
 
 client.on('message', message => {
 if (message.content.startsWith('%support')){
