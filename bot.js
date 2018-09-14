@@ -301,7 +301,7 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
 
 client.on("message", message => {
- if (message.content === "$الاذكار") {
+ if (message.content === "%الاذكار") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ جميع الاذكار  ▬▬▬▬▬▬✧
@@ -480,7 +480,7 @@ client.on('message', message => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`%help | $inv |  $suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
+    var setGame = [`%help | %inv |  %suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
     var i = -1;
     var j = 0;
     setInterval(function (){
