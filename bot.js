@@ -316,13 +316,6 @@ client.on("message", message => {
    }
    });
 
-client.on('message' , message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply("%help | %inv |  %suppport || أوامر البوت");
-    }
-});
 
 
 
@@ -481,6 +474,14 @@ client.on('message', message => {
     if (message.author.id === client.user.id) return;
             if (message.content.startsWith(prefix + "ping")) {
         message.channel.sendMessage(' 【 Speed ​​of connection 】 : `' + `${client.ping}` + ' ms`');
+    }
+});
+
+client.on('message', message => {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply("【 %help | %inv |  %suppport 】 : أوامر البوت");
     }
 });
 
