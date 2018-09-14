@@ -45,7 +45,7 @@ client.on('ready', () => {
     client.user.setStatus("idle")
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "@"
+const prefix = "%"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -237,7 +237,7 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
-const adminprefix = "@vip";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+const adminprefix = "%vip";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -263,7 +263,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 });
 
 client.on("message", message => {
- if (message.content === "@help") {
+ if (message.content === "%help") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
@@ -301,7 +301,7 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
 
 client.on("message", message => {
- if (message.content === "@الاذكار") {
+ if (message.content === "$الاذكار") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ جميع الاذكار  ▬▬▬▬▬▬✧
@@ -320,7 +320,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-if (message.content.startsWith('@support')){
+if (message.content.startsWith('%support')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("RANDOM")
@@ -350,7 +350,7 @@ Server Count: __${guild.memberCount}__**`)
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('@bcs')){
+if (message.content.startsWith('%bcs')){
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
     var bc = new
@@ -403,7 +403,7 @@ client.on('message', message => {
 
  
 client.on('message', message => {
-    if (message.content === "@inv") {
+    if (message.content === "%inv") {
       if(!message.channel.guild) return message.reply('Sorry, i Can Not Inv My Link In Your DM ;(')
         if(!message.channel.guild) return;
     let embed = new Discord.RichEmbed()
@@ -480,7 +480,7 @@ client.on('message', message => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`@help | @inv |  @suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
+    var setGame = [`%help | $inv |  $suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
     var i = -1;
     var j = 0;
     setInterval(function (){
