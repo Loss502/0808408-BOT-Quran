@@ -511,5 +511,10 @@ client.on('ready',  () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
+client.on('guildMemberAdd', member => {
+    if(member.user.bot) {
+        member.guild.member(member).kick({ reason: 'AntiBots' });
+    }
+});
 
 client.login(process.env.BOT_TOKEN)
