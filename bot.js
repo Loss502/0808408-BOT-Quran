@@ -302,8 +302,8 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
    
    
-   clien.on('message', message => {
-      if(message.content == 'قران1'){
+   client.on('message', message => {
+      if(message.content == 'r'){
         message.react('🔊')}  return;
   const ytdl = require('ytdl-core');
     const stram0ptions = { seek: 0, volume: 100};  
@@ -321,7 +321,7 @@ message.gulid.member(message.author).voiceChannel.join()
 .catch(console.error);
 });
 
-clien.on('messge', message => {
+client.on('messge', message => {
        if(message.content == '!قران 2'){
            message.react('🔊')} return;
     const ytdl = require('ytdl-core');
