@@ -302,13 +302,13 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
    
    
-   client.on('message', message => {
+  client.on('message', message => {
       if(message.content == 'r'){
         message.react('🔊')}  return;
   const ytdl = require('ytdl-core');
     const stram0ptions = { seek: 0, volume: 100};  
     const broadcast = 
-clien.createVoiceBroadcast();
+client.createVoiceBroadcast();
 
 
 
@@ -327,7 +327,7 @@ client.on('messge', message => {
     const ytdl = require('ytdl-core');
       const stram0ptions = { seek: 0, volume:100};
       const broadcast = 
-clien.createVoiceBroadcast();
+client.createVoiceBroadcast();
 
 
 
