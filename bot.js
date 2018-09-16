@@ -299,6 +299,48 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    }
    });
    
+   
+   
+   
+   clien.on('message', message => {
+      if(message.content == 'قران1'){
+        message.react('🔊')}  return;
+  const ytdl = require('ytdl-core');
+    const stram0ptions = { seek: 0, volume: 100};  
+    const broadcast = 
+clien.createVoiceBroadcast();
+
+
+
+message.gulid.member(message.author).voiceChannel.join()
+       .then(connection => {
+           const stream = ytdl('https://www.youtube.com/watch?v=Ktync4j_nmA', { filter : 'audioonly'});
+           broadcast.playstream(stream);
+           const dispatcher = connection.playBroadcast(broadcast);
+ })
+.catch(console.error);
+});
+
+clien.on('messge', message => {
+       if(message.content == '!قران 2'){
+           message.react('🔊')} return;
+    const ytdl = require('ytdl-core');
+      const stram0ptions = { seek: 0, volume:100};
+      const broadcast = 
+clien.createVoiceBroadcast();
+
+
+
+
+message.gulid.member(message.author).voiceChannel.join()
+       .then(connection => {
+           const stream = ytdl('https://www.youtube.com/watch?v=E1vpbnkTmUE' ,{ filter : 'audioonly' });
+           broadcast.playstream(stream);
+           const dispatcher = connection.playBroadcast(broadcast);
+       })
+.catch(console.error);
+});
+   
 
 client.on("message", message => {
  if (message.content === "%الاذكار") {
@@ -504,6 +546,8 @@ client.on('ready', function(){
 
 });
 
+
+
 client.on('ready',  () => {
     console.log(' تم تشغيل : Quran Bot ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
@@ -511,10 +555,5 @@ client.on('ready',  () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
-client.on('guildMemberAdd', member => {
-    if(member.user.bot) {
-        member.guild.member(member).kick({ reason: 'AntiBots' });
-    }
-});
 
 client.login(process.env.BOT_TOKEN)
