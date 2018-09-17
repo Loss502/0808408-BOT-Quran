@@ -312,7 +312,7 @@ const yt = require('ytdl-core');
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=9-oGnGaI9Ps&t=8009s', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=viC1MLxfPZI', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => {
           voiceChannel.leave();
@@ -574,10 +574,10 @@ client.on('message', message => {
            if(!message.channel.guild) return message.reply('** This command only for servers **');
     let embed = new Discord.RichEmbed()
  .setColor('RANDOM')
- .addField("**اسم السيرفر**", message.guild.name)
- .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
+ .addField("**عدد السيفرات**" , client.guilds.size)
  .addField("**المستخدمين:**", client.users.size)
- .addField("**قنوات:**", client.channels.size)
+ .addField("**القنوات:**", client.channels.size)
+ .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
 message.channel.sendEmbed(embed);
    }
 });
