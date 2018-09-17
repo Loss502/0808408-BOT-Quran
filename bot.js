@@ -301,46 +301,68 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
    
    
-   
-  client.on('message', message => {
-      if(message.content == 'r'){
-        message.react('🔊')}  return;
-  const ytdl = require('ytdl-core');
-    const stram0ptions = { seek: 0, volume: 100};  
-    const broadcast = 
-client.createVoiceBroadcast();
+   client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('%1q')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=9-oGnGaI9Ps&t=8009s', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('+stop')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
 
-message.gulid.member(message.author).voiceChannel.join()
-       .then(connection => {
-           const stream = ytdl('https://www.youtube.com/watch?v=Ktync4j_nmA', { filter : 'audioonly'});
-           broadcast.playstream(stream);
-           const dispatcher = connection.playBroadcast(broadcast);
- })
-.catch(console.error);
 });
 
-client.on('messge', message => {
-       if(message.content == '!قران 2'){
-           message.react('🔊')} return;
-    const ytdl = require('ytdl-core');
-      const stram0ptions = { seek: 0, volume:100};
-      const broadcast = 
-client.createVoiceBroadcast();
 
+   client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('%2q')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=viC1MLxfPZI', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('+stop')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
 
-message.gulid.member(message.author).voiceChannel.join()
-       .then(connection => {
-           const stream = ytdl('https://www.youtube.com/watch?v=E1vpbnkTmUE' ,{ filter : 'audioonly' });
-           broadcast.playstream(stream);
-           const dispatcher = connection.playBroadcast(broadcast);
-       })
-.catch(console.error);
 });
-   
 
 client.on("message", message => {
  if (message.content === "%الاذكار") {
@@ -547,6 +569,18 @@ client.on('ready', function(){
 });
 
 
+client.on('message', message => {
+    if (message.content === "%bot") {
+           if(!message.channel.guild) return message.reply('** This command only for servers **');
+    let embed = new Discord.RichEmbed()
+ .setColor('RANDOM')
+ .addField("**اسم السيرفر**", message.guild.name)
+ .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
+ .addField("**المستخدمين:**", client.users.size)
+ .addField("**قنوات:**", client.channels.size)
+message.channel.sendEmbed(embed);
+   }
+});
 
 client.on('ready',  () => {
     console.log(' تم تشغيل : Quran Bot ');
