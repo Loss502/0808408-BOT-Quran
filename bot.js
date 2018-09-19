@@ -59,7 +59,7 @@ client.on('message', async msg => { // eslint-disable-line
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	if (command === `play`) {
+	if (command === `play000`) {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send('يجب توآجد حضرتك بروم صوتي .');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
@@ -120,7 +120,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
 			return handleVideo(video, msg, voiceChannel);
 		}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	} else if (command === `skip`) {
+	} else if (command === `skip000`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لتجآوزه');
 		serverQueue.connection.dispatcher.end('تم تجآوز هذآ المقطع');
@@ -131,19 +131,19 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('تم إيقآف هذآ المقطع');
 		return undefined;
-	} else if (command === `vol`) {
+	} else if (command === `vol000`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء شغآل.');
 		if (!args[1]) return msg.channel.send(`:loud_sound: مستوى الصوت **${serverQueue.volume}**`);
 		serverQueue.volume = args[1];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
 		return msg.channel.send(`:speaker: تم تغير الصوت الي **${args[1]}**`);
-	} else if (command === `np`) {
+	} else if (command === `np000`) {
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء حالي ف العمل.');
 		const embedNP = new Discord.RichEmbed()
 	.setDescription(`:notes: الان يتم تشغيل : **${serverQueue.songs[0].title}**`)
 		return msg.channel.sendEmbed(embedNP);
-	} else if (command === `queue`) {
+	} else if (command === `queue000`) {
 		//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء حالي ف العمل.');
 		let index = 0;
@@ -154,7 +154,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 **الان يتم تشغيل** ${serverQueue.songs[0].title}`)
 		return msg.channel.sendEmbed(embedqu);
-	} else if (command === `pause`) {
+	} else if (command === `pause000`) {
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
@@ -271,23 +271,19 @@ client.on("message", message => {
 【 عند وجود اي مشكله توجه  لسيفر السبورت 】
 ⚙ https://discord.gg/ZfeTqSP ⚙
 
-${prefix}play  ➼  لتشغيل القرآن الكريم برآبط أو بأسم
+${prefix}➼ القرآن الكريم بصوت الشيخ ماهر المعيقلي
 
-${prefix}skip  ➼  لتجآوز القرآن الكريم الحآلي
+${prefix}➼ القران الكريم بصوت هزاع البلوشي
 
-${prefix}pause  ➼  لإيقآف القرآن الكريم مؤقتا
+${prefix}➼ القرآن الكريم بصوت الشيخ ياسر الدوسري
 
-${prefix}resume  ➼  لموآصلة القرآن الكريم بعد إيقآفه مؤقتا
+${prefix}➼ القرآن الكريم بصوت الشيخ أحمد العجمي
 
 ${prefix}vol  ➼  لتغيير درجة الصوت 100 - 0
 
 ${prefix}stop  ➼  لإخرآج البوت من الروم
 
-${prefix}np  ➼  لمعرفة المقاطع المشغلة حآليا
-
-${prefix}queue  ➼  لمعرفة قآئمة التشغيل
-
-${prefix}لمعرفة جميع الأذكار ➼ الاذكار
+${prefix}A ➼ لمعرفة جميع الأذكار 
 
 ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البوت
 
@@ -312,7 +308,7 @@ const yt = require('ytdl-core');
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=viC1MLxfPZI', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=Ktync4j_nmA', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => {
           voiceChannel.leave();
@@ -320,7 +316,7 @@ const yt = require('ytdl-core');
       });
   }
   
-  if (message.content.startsWith('+stop')) {
+  if (message.content.startsWith('%stop')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -344,7 +340,7 @@ const yt = require('ytdl-core');
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=viC1MLxfPZI', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=14JEJ0Cqq_M', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => {
           voiceChannel.leave();
@@ -352,7 +348,7 @@ const yt = require('ytdl-core');
       });
   }
   
-  if (message.content.startsWith('+stop')) {
+  if (message.content.startsWith('%stop')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -364,14 +360,80 @@ voiceChannel.leave();
 
 });
 
+
+   client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('%3q')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=WYT0pQne-7w', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('%stop')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
+
+});
+
+
+   client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('%4q')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=WYT0pQne-7w', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('%stop')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
+
+});
+
+
+
 client.on("message", message => {
- if (message.content === "%الاذكار") {
+ if (message.content === "%A") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ جميع الاذكار  ▬▬▬▬▬▬✧
 	  
-لمعرفة اذكار الصباح قم بكتابة ➼ اذكار الصباح 
-
+${prefix}1A ➼ لمعرفة اذكار الصباح قم بكتابة 
+	  
 【 سنقوم بإضافة العديد من الأذكار و المميزات بدعمكم نستمر وشكرا 】 
 
  ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
@@ -379,9 +441,34 @@ client.on("message", message => {
     
    }
    });
+   
+   
+   
+   client.on('message', message => {
+ if(message.content.startsWith(prefix + "1q")) {
+message.member.voiceChannel.join();
+}
+});
+
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "2q")) {
+message.member.voiceChannel.join();
+}
+});
 
 
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "3q")) {
+message.member.voiceChannel.join();
+}
+});
 
+
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "4q")) {
+message.member.voiceChannel.join();
+}
+});
 
 client.on('message', message => {
 if (message.content.startsWith('%support')){
@@ -394,6 +481,22 @@ if (message.content.startsWith('%support')){
   message.channel.sendEmbed(ra3d);
     }
 });
+   
+   
+   
+   } else if (command === `%vol`) {
+
+        if (!msg.member.voiceChannel) return msg.channel.send(" يجب أن تكون في روم صوتي لتشغيل أوامر القرآن الكريم ");
+        if (!serverQueue) return msg.channel.send(' يمكنك استخدام هذا الأمر أثناء تشغيل القرآن الكريم');
+        if (!args[1]) return msg.channel.send(`The bot volume is **${serverQueue.volume}**`);
+        
+        serverQueue.volume = args[1];
+        serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
+        
+        return msg.channel.send(`Volume Now is **${args[1]}**`);
+   
+   
+   
    
    
 client.on('guildCreate', guild => {
@@ -514,7 +617,7 @@ client.on('message', message => {
 
 ]
 client.on('message', msg => {
-if  (msg.content === 'اذكار الصباح') {
+if  (msg.content === '%1A') {
     const slamat = new Discord.RichEmbed()
     .setDescription(`${Slam[Math.floor(Math.random() * Slam.length)]}`)
     .setThumbnail(msg.author.avatarURL)
@@ -575,8 +678,8 @@ client.on('message', message => {
     let embed = new Discord.RichEmbed()
  .setColor('RANDOM')
  .addField("**عدد السيفرات**" , client.guilds.size)
- .addField("**المستخدمين:**", client.users.size)
- .addField("**القنوات:**", client.channels.size)
+ .addField("**المستخدمين**", client.users.size)
+ .addField("**القنوات**", client.channels.size)
  .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
 message.channel.sendEmbed(embed);
    }
