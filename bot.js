@@ -483,8 +483,7 @@ if (message.content.startsWith('%support')){
 });
    
    
-   
-   } else if (command === `%vol`) {
+ if (command === `%vol`) {
 
         if (!msg.member.voiceChannel) return msg.channel.send(" يجب أن تكون في روم صوتي لتشغيل أوامر القرآن الكريم ");
         if (!serverQueue) return msg.channel.send(' يمكنك استخدام هذا الأمر أثناء تشغيل القرآن الكريم');
@@ -493,7 +492,7 @@ if (message.content.startsWith('%support')){
         serverQueue.volume = args[1];
         serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
         
-        return msg.channel.send(`Volume Now is **${args[1]}**`);
+        return msg.channel.send(`Volume Now is **${args[1]}**`); 
    
    
    
