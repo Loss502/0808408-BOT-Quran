@@ -690,6 +690,6 @@ client.on('ready',  () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
-
+ 
 
 client.login(process.env.BOT_TOKEN)
