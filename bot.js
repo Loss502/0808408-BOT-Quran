@@ -281,7 +281,7 @@ ${prefix}q4 ➼ القرآن الكريم بصوت الشيخ أحمد العج�
 
 ${prefix}stop  ➼  لإخرآج البوت من الروم
 
-${prefix}i ➼ لمعرفة جميع الأذكار الموجودة 
+${prefix}A ➼ لمعرفة جميع الأذكار الموجودة 
 
 ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البوت
 
@@ -305,9 +305,9 @@ client.on("message", message => {
 【 عند وجود اي مشكله توجه  لسيفر السبورت 】
 ⚙ https://discord.gg/ZfeTqSP ⚙
 
-🕌 الأذكار المتوفرة أذكار الصباح و أذكارالمساء... 🕌
+🕌 الأذكار المتوفرة أذكار الصباح و أذكارالمساء 🕌
 
-${prefix}a
+${prefix}a ➼ لاظهار الأذكار
 
 【 سنقوم بإضافة العديد من المميزات بدعمكم نستمر وشكرا 】 
 
@@ -691,6 +691,19 @@ client.on('message', message => {
     }
 });
 
+client.on('message' , message => {
+    if (message.content === (prefix + "ping")) {
+        let edward = new Discord.RichEmbed()
+        .setColor("RED")
+        .setTitle("GamerStation")
+        .addField(`PING : `,`${Date.now() - message.createdTimestamp}`)
+        .setFooter(message.author.username, message.author.avatarURL)
+        .setThumbnail("http://i8.ae/VR57Z")
+        .setDescription("My PING LIKE :zap: ")
+		.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+        message.channel.send({embed:edward})
+    }
+});
 
 client.on('ready', function(){
     var ms = 10000 ;
