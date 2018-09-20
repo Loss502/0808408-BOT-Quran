@@ -125,7 +125,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لتجآوزه');
 		serverQueue.connection.dispatcher.end('تم تجآوز هذآ المقطع');
 		return undefined;
-	} else if (command === `stop`) {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+	} else if (command === `stop000`) {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لإيقآفه');
 		serverQueue.songs = [];
@@ -288,6 +288,7 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
 【 سنقوم بإضافة العديد من المميزات بدعمكم نستمر وشكرا 】 
 
  ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
+ .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
    message.channel.sendEmbed(embed)
     
    }
@@ -329,7 +330,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%q1')) {
+  if (message.content.startsWith('%q2')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -361,7 +362,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%q1')) {
+  if (message.content.startsWith('%q3')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -393,7 +394,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%q1')) {
+  if (message.content.startsWith('%q4')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -435,6 +436,7 @@ ${prefix}1A ➼ لمعرفة اذكار الصباح قم بكتابة
 【 سنقوم بإضافة العديد من الأذكار و المميزات بدعمكم نستمر وشكرا 】 
 
  ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
+ .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
    message.channel.sendEmbed(embed)
     
    }
@@ -663,7 +665,7 @@ client.on('message', message => {
            if(!message.channel.guild) return message.reply('** This command only for servers **');
     let embed = new Discord.RichEmbed()
  .setColor('RANDOM')
- .addField("**عدد السيفرات**" , client.guilds.size)
+ .addField("**عدد السيرفرات**" , client.guilds.size)
  .addField("**المستخدمين**", client.users.size)
  .addField("**القنوات**", client.channels.size)
  .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
