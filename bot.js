@@ -668,20 +668,9 @@ client.on('guildCreate', guild => {
 });
 
 
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-            if (message.content.startsWith(prefix + "ping")) {
-        message.channel.sendMessage(' 【 Speed ​​of connection 】 : `' + `${client.ping}` + ' ms`');
-    }
-});
 
 
-client.on('message', message => {
-if(!message.channel.guild) return;
-if (message.content.startsWith("%ping")) {
-    message.channel.sendMessage(`Pong ! \`${Date.now() - message.createdTimestamp} ms\`:watch:`);
-    }
-});
+
 
 client.on('message', message => {
     if (message.author.bot) return;
@@ -705,7 +694,7 @@ client.on('message', message => {
                         let embed = new Discord.RichEmbed()
                         .setAuthor(message.author.username,message.author.avatarURL)
                         .setColor('RANDOM')
-                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .addField('**Time Taken:**',msg + " ms ")
                         .setFooter(`Name Your Bot `,client.user.avatarURL)
 						.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
          message.channel.send({embed:embed});
