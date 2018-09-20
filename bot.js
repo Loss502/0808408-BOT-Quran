@@ -651,7 +651,7 @@ if  (msg.content === '%1A') {
   'اذكار المساء | سُبْحـانَ اللهِ وَبِحَمْـدِهِ.',
   
 
-]
+
 client.on('message', msg => {
 if  (msg.content === '%2A') {
     const slamat = new Discord.RichEmbed()
