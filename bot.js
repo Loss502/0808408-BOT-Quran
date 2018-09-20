@@ -691,15 +691,42 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => { 
+    if(!message.channel.guild) return;
+if (message.content.startsWith('%ping')) {
+if(!message.channel.guild) return;
+var msg = `${Date.now() - message.createdTimestamp}`
+var api = `${Math.round(Rocket.ping)}`
+if (message.author.bot) return;
+let embed = new Discord.RichEmbed()
+.setAuthor(message.author.username,message.author.avatarURL)
+.setColor('RANDOM')
+.addField('**Time Taken:**',msg + " ms 📶 ")
+.addField('**WebSocket:**',api + " ms 📶 ")
+.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+message.channel.send({embed:embed});
+}
+});
+
+///ping
 client.on('message', message => {
-	var command = message.content.toLowerCase().split(" ")[0];	
-if(command == prefix + 'ping') {
-		if(message.author.bot) return;
-		var api = `${Math.round(client.ping)}`
-		let ping = new Discord.RichEmbed()
-		.setDescription(`**Ping:** \`\`${client.pings[0]}ms\`\`\n**Time Taken:** \`\`${Date.now() - message.createdTimestamp}ms\`\`\n**Websocket:** \`\`${api}ms\`\``);
-		message.channel.send('**Pong!**').then(m => m.edit(ping));
-	};
+    if (message.author.bot) return
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith('-ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .setFooter(`Name Your Bot `,client.user.avatarURL)
+						.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+         message.channel.send({embed:embed});
+                        }
+                    });
+
 
 client.on('ready', function(){
     var ms = 10000 ;
