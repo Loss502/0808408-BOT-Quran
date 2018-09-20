@@ -271,15 +271,13 @@ client.on("message", message => {
 【 عند وجود اي مشكله توجه  لسيفر السبورت 】
 ⚙ https://discord.gg/ZfeTqSP ⚙
 
-${prefix}1q➼ القرآن الكريم بصوت الشيخ ماهر المعيقلي
+${prefix}q1 ➼ القرآن الكريم بصوت الشيخ ماهر المعيقلي
 
-${prefix}2q➼ القران الكريم بصوت هزاع البلوشي
+${prefix}q2 ➼ القران الكريم بصوت هزاع البلوشي
 
-${prefix}3q➼ القرآن الكريم بصوت الشيخ ياسر الدوسري
+${prefix}q3 ➼ القرآن الكريم بصوت الشيخ ياسر الدوسري
 
-${prefix}4q➼ القرآن الكريم بصوت الشيخ أحمد العجمي
-
-${prefix}vol  ➼  لتغيير درجة الصوت 100 - 0
+${prefix}q4 ➼ القرآن الكريم بصوت الشيخ أحمد العجمي
 
 ${prefix}stop  ➼  لإخرآج البوت من الروم
 
@@ -299,7 +297,7 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%1q')) {
+  if (message.content.startsWith('%q1')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -331,7 +329,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%2q')) {
+  if (message.content.startsWith('%q1')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -363,7 +361,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%3q')) {
+  if (message.content.startsWith('%q1')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
@@ -395,7 +393,7 @@ voiceChannel.leave();
 
    client.on('message', message => {
 const yt = require('ytdl-core');
-  if (message.content.startsWith('%4q')) {
+  if (message.content.startsWith('%q1')) {
               if(!message.channel.guild) return message.reply('** This command only for servers **');
 
     const voiceChannel = message.member.voiceChannel;
