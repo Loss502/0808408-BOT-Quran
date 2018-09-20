@@ -701,11 +701,13 @@ var msg = `${Date.now() - message.createdTimestamp}`
 var api = `${Math.round(client.ping)}`
 if (message.author.bot) return;
 let embed = new Discord.RichEmbed()
+.setColor("RANDOM")
                   .setColor('#36393e')
 .setTitle(' Time Taken : '+msg + " ms")
 .setAuthor(' Discord Api : '+api + " ms")
 .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
-message.channel.send({embed:embed}).then(message => message.delete(5000));
+ message.channel.sendEmbed(embed);
+
 }
 });
 client.on('ready', function(){
