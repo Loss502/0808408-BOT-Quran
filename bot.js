@@ -692,24 +692,15 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-    if(!message.channel.guild) return;
-if(message.content.toLowerCase() === prefix + "ping") {
-if(!message.channel.guild) return;
-var msg = `${Date.now() - message.createdTimestamp}`
-var api = `${Math.round(client.ping)}`
-if (message.author.bot) return;
-let embed = new Discord.RichEmbed()
-.setColor("RANDOM")
-                  .setColor('#36393e')
-.setTitle(' Time Taken : '+msg + " ms")
-.setAuthor(' Discord Api : '+api + " ms")
-.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
- message.channel.sendEmbed(embed);
+	var command = message.content.toLowerCase().split(" ")[0];	
+if(command == prefix + 'ping') {
+		if(message.author.bot) return;
+		var api = `${Math.round(client.ping)}`
+		let ping = new Discord.RichEmbed()
+		.setDescription(`**Ping:** \`\`${client.pings[0]}ms\`\`\n**Time Taken:** \`\`${Date.now() - message.createdTimestamp}ms\`\`\n**Websocket:** \`\`${api}ms\`\``);
+		message.channel.send('**Pong!**').then(m => m.edit(ping));
+	};
 
-}
-});
 client.on('ready', function(){
     var ms = 10000 ;
     var setGame = [`%help | %inv |  %suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
