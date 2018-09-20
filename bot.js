@@ -691,20 +691,23 @@ client.on('message', message => {
     }
 });
 
-client.on('message' , message => {
-    if (message.content === (prefix + "ping")) {
-        let edward = new Discord.RichEmbed()
-        .setColor("RED")
-        .setTitle("GamerStation")
-        .addField(`PING : `,`${Date.now() - message.createdTimestamp}`)
-        .setFooter(message.author.username, message.author.avatarURL)
-        .setThumbnail("http://i8.ae/VR57Z")
-        .setDescription("My PING LIKE :zap: ")
-		.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
-        message.channel.send({embed:edward})
-    }
+client.on('message', message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    if(!message.channel.guild) return;
+if(message.content.toLowerCase() === prefix + "ping") {
+if(!message.channel.guild) return;
+var msg = `${Date.now() - message.createdTimestamp}`
+var api = `${Math.round(client.ping)}`
+if (message.author.bot) return;
+let embed = new Discord.RichEmbed()
+                  .setColor('#36393e')
+.setTitle(' Time Taken : '+msg + " ms")
+.setAuthor(' Discord Api : '+api + " ms")
+.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+message.channel.send({embed:embed}).then(message => message.delete(5000));
+}
 });
-
 client.on('ready', function(){
     var ms = 10000 ;
     var setGame = [`%help | %inv |  %suppport`,`By : FiKO || ໑ڪــɹ̤ᓅ`];
