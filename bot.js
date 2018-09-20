@@ -281,9 +281,33 @@ ${prefix}q4 ➼ القرآن الكريم بصوت الشيخ أحمد العج�
 
 ${prefix}stop  ➼  لإخرآج البوت من الروم
 
-${prefix}A ➼ لمعرفة جميع الأذكار 
+${prefix}i ➼ لمعرفة جميع الأذكار الموجودة 
 
 ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البوت
+
+【 سنقوم بإضافة العديد من المميزات بدعمكم نستمر وشكرا 】 
+
+ ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧`)
+ .setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+   message.channel.sendEmbed(embed)
+    
+   }
+   });
+   
+   
+   
+client.on("message", message => {
+ if (message.content === "A") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
+	  
+【 عند وجود اي مشكله توجه  لسيفر السبورت 】
+⚙ https://discord.gg/ZfeTqSP ⚙
+
+🕌 الأذكار المتوفرة أذكار الصباح و أذكارالمساء... 🕌
+
+${prefix}a
 
 【 سنقوم بإضافة العديد من المميزات بدعمكم نستمر وشكرا 】 
 
@@ -619,7 +643,7 @@ client.on('message', message => {
   
 ]
 client.on('message', msg => {
-if  (msg.content === '%1A') {
+if  (msg.content === '%a') {
     const slamat = new Discord.RichEmbed()
     .setDescription(`${Slam[Math.floor(Math.random() * Slam.length)]}`)
     .setThumbnail(msg.author.avatarURL)
@@ -648,6 +672,7 @@ client.on('message', message => {
     if (message.author.id === client.user.id) return;
             if (message.content.startsWith(prefix + "ping")) {
         message.channel.sendMessage(' 【 Speed ​​of connection 】 : `' + `${client.ping}` + ' ms`');
+		.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
     }
 });
 
