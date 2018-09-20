@@ -672,7 +672,14 @@ client.on('message', message => {
     if (message.author.id === client.user.id) return;
             if (message.content.startsWith(prefix + "ping")) {
         message.channel.sendMessage(' 【 Speed ​​of connection 】 : `' + `${client.ping}` + ' ms`');
-	.setFooter("By : FiKO || ໑ڪــɹ̤ᓅ ")
+    }
+});
+
+
+client.on('message', message => {
+if(!message.channel.guild) return;
+if (message.content.startsWith("%ping")) {
+    message.channel.sendMessage(`Pong ! \`${Date.now() - message.createdTimestamp} ms\`:watch:`);
     }
 });
 
