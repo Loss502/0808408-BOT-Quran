@@ -297,7 +297,7 @@ ${prefix}mes  ➼  ارسال اقتراح او لمراسلة صاحب البو
    
    
 client.on("message", message => {
- if (message.content === "A") {
+ if (message.content === "%A") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬▬ BOT Quran ▬▬▬▬▬▬✧
