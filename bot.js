@@ -279,6 +279,8 @@ ${prefix}q3 ➼ القرآن الكريم بصوت الشيخ ياسر الدو�
 
 ${prefix}q4 ➼ القرآن الكريم بصوت الشيخ أحمد العجمي
 
+${prefix}q5 ➼ القرآن الكريم بصوت الشيخ عبدالرحمن السديس
+
 ${prefix}stop  ➼  لإخرآج البوت من الروم
 
 ${prefix}A ➼ لمعرفة جميع الأذكار الموجودة 
@@ -428,6 +430,40 @@ const yt = require('ytdl-core');
     voiceChannel.join()
       .then(connnection => {
         let stream = yt('https://www.youtube.com/watch?v=WYT0pQne-7w', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('%stop000')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
+
+});
+
+
+
+
+   client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('%q5')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=a-JdEFdgBaU', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => {
           voiceChannel.leave();
